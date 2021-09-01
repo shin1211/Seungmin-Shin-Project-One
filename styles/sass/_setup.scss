@@ -222,9 +222,16 @@ html {
   overflow: hidden;
 }
 
-// font-family: 'Chathura', sans-serif;
+// variables
 
-// font-family: 'Tulpen One', cursive;
+$color-1: #ffffff;
+$color-2: #bf2603;
+$color-3: #ff8327;
+$color-4: #111010;
+$color-5: #220303;
+
+$base-font: "Chathura", sans-serif;
+$sub-font: "Tulpen One", cursive;
 
 html {
   font-size: 120%;
@@ -233,49 +240,71 @@ html {
 ul,
 h1,
 h2,
+h3,
 a {
   padding: 0;
   margin: 0;
 }
-
+h2,
 .sub-heading,
 .nav-bar a {
-  font-family: "Chathura", sans-serif;
+  font-family: $base-font;
   font-weight: 700;
 }
 
-h1 {
-  font-family: "Tulpen One", cursive;
+h1,
+h2.logo {
+  font-family: $sub-font;
   font-weight: 400;
+}
+
+h1 {
   font-size: 13.07rem;
   letter-spacing: 2.4px;
-  color: #ff8327;
+  color: $color-3;
   position: relative;
   margin-bottom: 5rem;
   z-index: 10;
+
+  .sub-heading {
+    display: block;
+    font-size: 4.16rem;
+    letter-spacing: 2.4px;
+    color: $color-1;
+    line-height: 94.7px;
+    position: absolute;
+    top: 207px;
+    left: 7px;
+  }
 }
 
-h1 .sub-heading {
-  display: block;
-  font-size: 4.16rem;
-  color: #ffffff;
-  line-height: 94.7px;
-  position: absolute;
-  top: 200px;
-  left: 0;
+h2 {
+  font-size: 3.4rem;
+  color: $color-1;
 }
 
-.nav-bar a {
-  font-size: 1.9rem;
-  line-height: 29px;
-  letter-spacing: 1.9px;
+.nav-bar {
+  a {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 29px;
+    letter-spacing: 1.9px;
+  }
+
+  h2.logo {
+    text-transform: none;
+    font-size: 3rem;
+    color: $color-1;
+  }
 }
 
 p {
   font-family: "Chathura", sans-serif;
+  font-size: 1.95rem;
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 1.9px;
+  color: $color-1;
 }
 
 .wrapper {

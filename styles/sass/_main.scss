@@ -1,3 +1,7 @@
+/*=============
+section.about-info
+=============== */
+
 section.about-info {
   background-color: $color-4;
   padding: 6rem 0;
@@ -9,18 +13,61 @@ section.about-info {
 
     li {
       width: 50%;
-      padding: 3rem;
-      border: 1px solid red;
+      padding: 2rem;
+      display: flex;
 
-      h2 {
-        position: relative;
-        &::before {
-          content: "--";
-          position: absolute;
-          //   float: left;
-          left: -30px;
-        }
+      i.fas {
+        display: block;
+        color: $color-1;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 20px;
+        background-color: $color-2;
+        align-self: baseline;
+        border-radius: 50%;
       }
+    }
+  }
+}
+
+/*=============
+section.blog
+=============== */
+
+section.blog {
+  background-color: $color-5;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+
+      .image-container img {
+        display: block;
+        object-fit: cover;
+        height: auto;
+      }
+
+      .image-container {
+        flex: 1 0 45%;
+        border: 1px solid red;
+        // padding: 3rem;
+      }
+      .content {
+        padding: 3rem;
+        flex: 1 0 45%;
+        height: 400px;
+      }
+    }
+    li:first-child .content {
+      margin-left: 3rem;
+    }
+    li:last-child .image-container {
+      order: 1;
+      margin-left: 3rem;
     }
   }
 }

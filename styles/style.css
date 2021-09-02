@@ -273,10 +273,16 @@ html {
   font-size: 120%;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 ul,
 h1,
 h2,
 h3,
+p,
 a {
   padding: 0;
   margin: 0;
@@ -317,6 +323,8 @@ h1 .sub-heading {
 h2 {
   font-size: 3.4rem;
   color: #ffffff;
+  line-height: 58px;
+  letter-spacing: 2.2px;
 }
 
 .nav-bar a {
@@ -333,8 +341,8 @@ h2 {
 
 p {
   font-family: "Chathura", sans-serif;
-  font-size: 1.95rem;
   font-weight: 400;
+  font-size: 1.95rem;
   line-height: 30px;
   letter-spacing: 1.9px;
   color: #ffffff;
@@ -342,7 +350,7 @@ p {
 
 .wrapper {
   max-width: 1200px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -422,6 +430,9 @@ header .wrapper nav .nav-bar li a:hover, header .wrapper nav .nav-bar li a:focus
   color: #ff8327;
 }
 
+/*=============
+section.about-info
+=============== */
 section.about-info {
   background-color: #111010;
   padding: 6rem 0;
@@ -436,14 +447,69 @@ section.about-info ul {
 }
 section.about-info ul li {
   width: 50%;
-  padding: 3rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.about-info ul li i.fas {
+  display: block;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+  background-color: #bf2603;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  border-radius: 50%;
+}
+
+/*=============
+section.blog
+=============== */
+section.blog {
+  background-color: #220303;
+}
+section.blog ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section.blog ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.blog ul li .image-container img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+section.blog ul li .image-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 45%;
+          flex: 1 0 45%;
   border: 1px solid red;
 }
-section.about-info ul li h2 {
-  position: relative;
+section.blog ul li .content {
+  padding: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 45%;
+          flex: 1 0 45%;
+  height: 400px;
 }
-section.about-info ul li h2::before {
-  content: "--";
-  position: absolute;
-  left: -30px;
+section.blog ul li:first-child .content {
+  margin-left: 3rem;
+}
+section.blog ul li:last-child .image-container {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: 3rem;
 }

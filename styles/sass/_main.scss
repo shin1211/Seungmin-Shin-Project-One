@@ -7,26 +7,25 @@ section.about-info {
   padding: 6rem 0;
 
   ul {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
+  }
 
-    li {
-      width: 50%;
-      padding: 2rem;
-      display: flex;
+  li {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
 
-      i.fas {
-        display: block;
-        color: $color-1;
-        font-size: 1.2rem;
-        padding: 10px;
-        margin-top: 10px;
-        margin-right: 20px;
-        background-color: $color-2;
-        align-self: baseline;
-        border-radius: 50%;
-      }
+    i.fas {
+      display: block;
+      color: $color-1;
+      font-size: 1.2rem;
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 20px;
+      background-color: $color-2;
+      align-self: baseline;
+      border-radius: 50%;
     }
   }
 }
@@ -41,75 +40,73 @@ section.blog {
   ul {
     display: flex;
     flex-direction: column;
+  }
+  li {
+    display: flex;
 
-    li {
-      display: flex;
+    &:first-child .content {
+      padding-bottom: 0;
+    }
 
-      &:first-child .content {
-        padding-bottom: 0;
-      }
+    &:last-child h2,
+    &:last-child a {
+      align-self: flex-end;
+    }
 
-      &:last-child .content h2,
-      &:last-child .content a {
-        align-self: flex-end;
-      }
+    &:last-child .image-container {
+      order: 1;
+      position: relative;
+    }
+  }
+  .image-container {
+    width: 100%;
+    height: auto;
+    flex: 1 0 50%;
 
-      &:last-child .image-container {
-        order: 1;
-        position: relative;
-      }
+    .left-image {
+      background-image: url(../images/Home/left-image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: calc(100% - 5rem);
+      height: 370px;
+      // width: calc(100% - 7rem);
+      // height: 500px;
+      margin-top: -34px;
+      box-shadow: 15px 15px $color-3;
+    }
 
-      .image-container {
-        width: 100%;
-        height: auto;
-        flex: 1 0 50%;
+    .right-image {
+      background-image: url(../images/Home/right-image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: calc(100% - 5rem);
+      height: 370px;
+      // width: calc(100% - 7rem);
+      // height: 500px;
+      position: absolute;
+      bottom: -50px;
+      // bottom: -100px;
+      right: 0;
+      box-shadow: -15px 15px $color-3;
+    }
+  }
+  .content {
+    padding: 3rem 5rem;
+    // padding: 5rem 7rem;
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
 
-        .left-image {
-          background-image: url(../images/Home/left-image.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: calc(100% - 5rem);
-          height: 370px;
-          // width: calc(100% - 7rem);
-          // height: 500px;
-          margin-top: -34px;
-          box-shadow: 15px 15px $color-3;
-        }
-
-        .right-image {
-          background-image: url(../images/Home/right-image.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: calc(100% - 5rem);
-          height: 370px;
-          // width: calc(100% - 7rem);
-          // height: 500px;
-          position: absolute;
-          bottom: -50px;
-          // bottom: -100px;
-          right: 0;
-          box-shadow: -15px 15px $color-3;
-        }
-      }
-      .content {
-        padding: 3rem 5rem;
-        // padding: 5rem 7rem;
-        flex: 1 0 50%;
-        display: flex;
-        flex-direction: column;
-
-        a {
-          align-self: flex-start;
-        }
-      }
+    a {
+      align-self: flex-start;
     }
   }
 }
 
 /*=============
-section.test   name has to be changed.
+section.party-info  
 =============== */
-section.test {
+section.party-info {
   background-color: $color-4;
   padding-top: 6rem;
 
@@ -117,13 +114,14 @@ section.test {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-self: center;
+    align-items: center;
+    padding: 3rem;
+  }
 
-    h2,
-    a {
-      align-self: center;
-      margin: 1.5rem;
-    }
+  h2,
+  a {
+    align-self: center;
+    margin: 1.5rem;
   }
 
   .banner-image {
@@ -148,27 +146,39 @@ section.event {
   .wrapper {
     display: flex;
     align-content: center;
+  }
+  .image-container {
+    flex: 1 0 30%;
+    background-image: url(../images/Home/small-box-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    box-shadow: -15px 15px $color-3;
+  }
 
-    .image-container {
-      flex: 1 0 30%;
-      background-image: url(../images/Home/small-box-image.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 300px;
-      box-shadow: -15px 15px $color-3;
-      // border: 1px solid red;
-    }
+  .content {
+    flex: 1 1 70%;
+    margin-left: 5rem;
+  }
+}
 
-    .content {
-      flex: 1 0 70%;
-      margin-left: 5rem;
+/*=============
+section.galley
+=============== */
 
-      h2.article-head {
-        margin-bottom: 1rem;
-      }
-      a {
-        margin-top: 2rem;
-      }
+section.gallery {
+  background-color: $color-5;
+
+  .gallery-container {
+    display: flex;
+    padding: 5rem 0;
+  }
+
+  .image-container {
+    margin-right: 1.3rem;
+
+    &:last-child {
+      margin: 0;
     }
   }
 }

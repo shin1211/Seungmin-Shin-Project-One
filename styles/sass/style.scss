@@ -1,4 +1,134 @@
 @import "setup";
 @import "header";
+@import "nav-and-footer";
 @import "main";
-@import "footer";
+
+@media (max-width: 1024px) {
+  /*=============
+  Header
+  =============== */
+
+  header .nav-bar {
+    display: none;
+  }
+  nav h2.mobile-logo {
+    display: flex;
+
+    padding: 1rem;
+  }
+
+  /*=============
+  Blog
+  =============== */
+
+  section.blog li {
+    flex-direction: column;
+
+    &:first-child .content,
+    .content {
+      padding: 5rem;
+    }
+
+    &:last-child .content h2,
+    &:last-child .content a {
+      align-self: flex-start;
+      margin: 1rem 0;
+    }
+
+    &:last-child .image-container {
+      order: 0;
+    }
+
+    .image-container .right-image,
+    .image-container .left-image {
+      position: static;
+      box-shadow: none;
+      width: 100%;
+    }
+  }
+
+  /*=============
+  Party-info
+  =============== */
+
+  section.party-info {
+    padding-top: 3rem;
+
+    .banner-image {
+      background-size: contain;
+      margin-top: 0;
+    }
+  }
+
+  /*=============
+  Event
+  =============== */
+
+  section.event {
+    padding: 3rem;
+
+    .image-container {
+      flex: 1 0 50%;
+    }
+
+    .content {
+      margin-left: 2.5rem;
+      flex: 1 0 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /*=============
+  About
+  =============== */
+  section.about-info li {
+    width: 100%;
+  }
+
+  /*=============
+  Event
+  =============== */
+  section.event {
+    padding: 7rem 0;
+    .wrapper {
+      flex-direction: column;
+    }
+    .image-container,
+    .content {
+      flex: none;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .image-container {
+      box-shadow: none;
+      width: 60%;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  /*=============
+  Gallery
+  =============== */
+
+  section.gallery {
+    .gallery-container {
+      flex-wrap: wrap;
+    }
+
+    .image-container {
+      flex: 1 0 calc(50% - 2rem);
+      margin: 0;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

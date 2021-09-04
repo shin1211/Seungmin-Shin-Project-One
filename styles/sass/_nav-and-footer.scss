@@ -1,0 +1,44 @@
+/*=============
+Nav-bar
+=============== */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2.mobile-logo {
+    display: none;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  li {
+    padding: 1rem 2rem;
+    flex: 1 0 auto;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-1;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      color: $color-3;
+    }
+  }
+}
+
+/*=============
+footer
+=============== */
+
+footer {
+  background-color: darkgrey;
+  text-align: center;
+}

@@ -233,13 +233,21 @@ $color-5: #220303;
 $base-font: "Chathura", sans-serif;
 $sub-font: "Tulpen One", cursive;
 
+/*=============
+General
+=============== */
+
 html {
-  font-size: 120%;
+  font-size: 125%;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  list-style: none;
 }
 
 ul,
@@ -251,6 +259,17 @@ a {
   padding: 0;
   margin: 0;
 }
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*=============
+Font
+=============== */
+
 h2,
 .sub-heading,
 .nav-bar a {
@@ -260,8 +279,9 @@ h2,
 
 h1,
 h2.logo,
+h2.mobile-logo,
 section.blog a,
-section.test a,
+section.party-info a,
 section.event a {
   font-family: $sub-font;
   font-weight: 400;
@@ -295,6 +315,14 @@ h2 {
 
   &.article-head {
     color: $color-3;
+    margin-bottom: 1rem;
+  }
+
+  &.logo,
+  &.mobile-logo {
+    text-transform: none;
+    font-size: 3rem;
+    color: $color-1;
   }
 }
 
@@ -305,12 +333,6 @@ h2 {
     line-height: 29px;
     letter-spacing: 1.9px;
   }
-
-  h2.logo {
-    text-transform: none;
-    font-size: 3rem;
-    color: $color-1;
-  }
 }
 
 p {
@@ -320,13 +342,17 @@ p {
   line-height: 30px;
   letter-spacing: 1.9px;
   color: $color-1;
+
+  &.copyright {
+    font-size: 0.95rem;
+  }
 }
 
 /*=============
 link buttons
 =============== */
 section.blog a,
-section.test a,
+section.party-info a,
 section.event a {
   display: inline-block;
   font-size: 1.5rem;
@@ -336,10 +362,4 @@ section.event a {
   margin-top: 1rem;
   background-color: $color-2;
   color: $color-1;
-}
-
-.wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
 }

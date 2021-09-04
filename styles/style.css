@@ -269,13 +269,20 @@ html {
   overflow: hidden;
 }
 
+/*=============
+General
+=============== */
 html {
-  font-size: 120%;
+  font-size: 125%;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  list-style: none;
 }
 
 ul,
@@ -288,6 +295,15 @@ a {
   margin: 0;
 }
 
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*=============
+Font
+=============== */
 h2,
 .sub-heading,
 .nav-bar a {
@@ -297,8 +313,9 @@ h2,
 
 h1,
 h2.logo,
+h2.mobile-logo,
 section.blog a,
-section.test a,
+section.party-info a,
 section.event a {
   font-family: "Tulpen One", cursive;
   font-weight: 400;
@@ -331,6 +348,12 @@ h2 {
 }
 h2.article-head {
   color: #ff8327;
+  margin-bottom: 1rem;
+}
+h2.logo, h2.mobile-logo {
+  text-transform: none;
+  font-size: 3rem;
+  color: #ffffff;
 }
 
 .nav-bar a {
@@ -338,11 +361,6 @@ h2.article-head {
   font-size: 1.9rem;
   line-height: 29px;
   letter-spacing: 1.9px;
-}
-.nav-bar h2.logo {
-  text-transform: none;
-  font-size: 3rem;
-  color: #ffffff;
 }
 
 p {
@@ -353,12 +371,15 @@ p {
   letter-spacing: 1.9px;
   color: #ffffff;
 }
+p.copyright {
+  font-size: 0.95rem;
+}
 
 /*=============
 link buttons
 =============== */
 section.blog a,
-section.test a,
+section.party-info a,
 section.event a {
   display: inline-block;
   font-size: 1.5rem;
@@ -368,12 +389,6 @@ section.event a {
   margin-top: 1rem;
   background-color: #bf2603;
   color: #ffffff;
-}
-
-.wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
 }
 
 header {
@@ -411,7 +426,11 @@ header .wrapper {
           align-items: center;
   height: 100%;
 }
-header .wrapper nav {
+
+/*=============
+Nav-bar
+=============== */
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +441,10 @@ header .wrapper nav {
       -ms-flex-align: center;
           align-items: center;
 }
-header .wrapper nav .nav-bar {
+nav h2.mobile-logo {
+  display: none;
+}
+nav .nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -433,23 +455,31 @@ header .wrapper nav .nav-bar {
       -ms-flex-align: center;
           align-items: center;
 }
-header .wrapper nav .nav-bar li {
+nav li {
   padding: 1rem 2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
-header .wrapper nav .nav-bar li a {
+nav a {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-header .wrapper nav .nav-bar li a:hover, header .wrapper nav .nav-bar li a:focus {
+nav a:hover, nav a:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #ff8327;
+}
+
+/*=============
+footer
+=============== */
+footer {
+  background-color: darkgrey;
+  text-align: center;
 }
 
 /*=============
@@ -460,21 +490,20 @@ section.about-info {
   padding: 6rem 0;
 }
 section.about-info ul {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-section.about-info ul li {
+section.about-info li {
   width: 50%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-section.about-info ul li i.fas {
+section.about-info li i.fas {
   display: block;
   color: #ffffff;
   font-size: 1.2rem;
@@ -502,32 +531,32 @@ section.blog ul {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-section.blog ul li {
+section.blog li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-section.blog ul li:first-child .content {
+section.blog li:first-child .content {
   padding-bottom: 0;
 }
-section.blog ul li:last-child .content h2, section.blog ul li:last-child .content a {
+section.blog li:last-child h2, section.blog li:last-child a {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
-section.blog ul li:last-child .image-container {
+section.blog li:last-child .image-container {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   position: relative;
 }
-section.blog ul li .image-container {
+section.blog .image-container {
   width: 100%;
   height: auto;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
 }
-section.blog ul li .image-container .left-image {
+section.blog .image-container .left-image {
   background-image: url(../images/Home/left-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -537,7 +566,7 @@ section.blog ul li .image-container .left-image {
   -webkit-box-shadow: 15px 15px #ff8327;
           box-shadow: 15px 15px #ff8327;
 }
-section.blog ul li .image-container .right-image {
+section.blog .image-container .right-image {
   background-image: url(../images/Home/right-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,7 +578,7 @@ section.blog ul li .image-container .right-image {
   -webkit-box-shadow: -15px 15px #ff8327;
           box-shadow: -15px 15px #ff8327;
 }
-section.blog ul li .content {
+section.blog .content {
   padding: 3rem 5rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
@@ -562,19 +591,19 @@ section.blog ul li .content {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-section.blog ul li .content a {
+section.blog .content a {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
 /*=============
-section.test   name has to be changed.
+section.party-info  
 =============== */
-section.test {
+section.party-info {
   background-color: #111010;
   padding-top: 6rem;
 }
-section.test .wrapper {
+section.party-info .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,14 +614,18 @@ section.test .wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
 }
-section.test .wrapper h2,
-section.test .wrapper a {
+section.party-info h2,
+section.party-info a {
   -ms-flex-item-align: center;
       align-self: center;
   margin: 1.5rem;
 }
-section.test .banner-image {
+section.party-info .banner-image {
   background-image: url(../images/Home/banner-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -616,7 +649,7 @@ section.event .wrapper {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-section.event .wrapper .image-container {
+section.event .image-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 30%;
           flex: 1 0 30%;
@@ -627,15 +660,161 @@ section.event .wrapper .image-container {
   -webkit-box-shadow: -15px 15px #ff8327;
           box-shadow: -15px 15px #ff8327;
 }
-section.event .wrapper .content {
+section.event .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 70%;
-          flex: 1 0 70%;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
   margin-left: 5rem;
 }
-section.event .wrapper .content h2.article-head {
-  margin-bottom: 1rem;
+
+/*=============
+section.galley
+=============== */
+section.gallery {
+  background-color: #220303;
 }
-section.event .wrapper .content a {
-  margin-top: 2rem;
+section.gallery .gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 0;
+}
+section.gallery .image-container {
+  margin-right: 1.3rem;
+}
+section.gallery .image-container:last-child {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  /*=============
+  Header
+  =============== */
+  header .nav-bar {
+    display: none;
+  }
+
+  nav h2.mobile-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+  }
+
+  /*=============
+  Blog
+  =============== */
+  section.blog li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.blog li:first-child .content,
+section.blog li .content {
+    padding: 5rem;
+  }
+  section.blog li:last-child .content h2, section.blog li:last-child .content a {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 1rem 0;
+  }
+  section.blog li:last-child .image-container {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  section.blog li .image-container .right-image,
+section.blog li .image-container .left-image {
+    position: static;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+
+  /*=============
+  Party-info
+  =============== */
+  section.party-info {
+    padding-top: 3rem;
+  }
+  section.party-info .banner-image {
+    background-size: contain;
+    margin-top: 0;
+  }
+
+  /*=============
+  Event
+  =============== */
+  section.event {
+    padding: 3rem;
+  }
+  section.event .image-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+  }
+  section.event .content {
+    margin-left: 2.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+  }
+}
+@media (max-width: 768px) {
+  /*=============
+  About
+  =============== */
+  section.about-info li {
+    width: 100%;
+  }
+
+  /*=============
+  Event
+  =============== */
+  section.event {
+    padding: 7rem 0;
+  }
+  section.event .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.event .image-container,
+section.event .content {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin: 0;
+    padding: 1rem;
+  }
+  section.event .image-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 60%;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  /*=============
+  Gallery
+  =============== */
+  section.gallery .gallery-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.gallery .image-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 2rem);
+            flex: 1 0 calc(50% - 2rem);
+    margin: 0;
+  }
+  section.gallery .image-container:first-child {
+    margin-right: 1rem;
+  }
+  section.gallery .image-container:last-child {
+    display: none;
+  }
 }

@@ -16,6 +16,10 @@ section.about-info {
     padding: 2rem;
     display: flex;
 
+    &:nth-child(3) i.fas {
+      padding: 10px 14px;
+    }
+
     i.fas {
       display: block;
       color: $color-1;

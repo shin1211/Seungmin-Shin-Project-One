@@ -1,7 +1,7 @@
 @import "setup";
-@import "header";
+@import "home/header";
 @import "nav-and-footer";
-@import "main";
+@import "home/main";
 
 @media (max-width: 1024px) {
   /*=============
@@ -11,10 +11,21 @@
   header .nav-bar {
     display: none;
   }
-  nav h2.mobile-logo {
-    display: flex;
 
-    padding: 1rem;
+  nav {
+    justify-content: space-between;
+    width: 100%;
+
+    p.mobile-logo,
+    i.fas {
+      display: block;
+      color: $color-1;
+      padding: 1rem;
+    }
+
+    i.fas {
+      font-size: 2rem;
+    }
   }
 
   /*=============
@@ -144,6 +155,10 @@
     }
   }
 
+  section.about-info li {
+    padding: 2rem 1rem;
+  }
+
   section.blog li:first-child .content,
   section.blog li:last-child .content {
     padding: 2rem;
@@ -160,6 +175,9 @@
     display: flex;
     flex-direction: column-reverse;
 
+    .banner-image {
+      height: 300px;
+    }
     h2 {
       margin: 0;
       margin-bottom: 2.2rem;

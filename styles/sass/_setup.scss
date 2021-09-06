@@ -254,6 +254,7 @@ ul,
 h1,
 h2,
 h3,
+h4,
 p,
 a {
   padding: 0;
@@ -271,18 +272,28 @@ Font
 =============== */
 
 h2,
+h3,
+h4,
 .sub-heading,
-.nav-bar a {
+.nav-bar a,
+aside.side-bar a {
   font-family: $base-font;
   font-weight: 700;
 }
 
+p,
+label {
+  font-family: $base-font;
+  font-weight: 400;
+}
+
 h1,
-h2.logo,
-h2.mobile-logo,
+p.logo,
+p.mobile-logo,
 section.blog a,
 section.party-info a,
-section.event a {
+section.event a,
+form button {
   font-family: $sub-font;
   font-weight: 400;
 }
@@ -317,13 +328,18 @@ h2 {
     color: $color-3;
     margin-bottom: 1rem;
   }
+}
 
-  &.logo,
-  &.mobile-logo {
-    text-transform: none;
-    font-size: 3rem;
-    color: $color-1;
-  }
+h3 {
+  font-size: 3rem;
+  color: $color-1;
+  line-height: 55px;
+  letter-spacing: 2.2px;
+}
+
+h4 {
+  color: $color-3;
+  font-size: 2rem;
 }
 
 .nav-bar {
@@ -336,16 +352,25 @@ h2 {
 }
 
 p {
-  font-family: $base-font;
-  font-weight: 400;
   font-size: 1.9rem;
   line-height: 30px;
   letter-spacing: 1.9px;
   color: $color-1;
 
+  &.logo,
+  &.mobile-logo {
+    text-transform: none;
+    font-size: 3rem;
+    color: $color-1;
+  }
+
   &.copyright {
     font-size: 0.95rem;
   }
+}
+
+label {
+  font-size: 1.5rem;
 }
 
 /*=============
@@ -353,7 +378,8 @@ link buttons
 =============== */
 section.blog a,
 section.party-info a,
-section.event a {
+section.event a,
+form button {
   display: inline-block;
   font-size: 1.5rem;
   letter-spacing: 1.9px;
@@ -362,4 +388,14 @@ section.event a {
   margin-top: 1rem;
   background-color: $color-2;
   color: $color-1;
+}
+
+/*=============
+Blog font styles
+=============== */
+
+aside.side-bar a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: $color-3;
 }

@@ -388,14 +388,34 @@ form button {
   margin-top: 1rem;
   background-color: $color-2;
   color: $color-1;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-3;
+    color: $color-4;
+    transform: scale(1.1);
+  }
 }
 
 /*=============
 Blog font styles
 =============== */
 
-aside.side-bar a {
+aside.side-bar .content a {
+  display: block;
   text-decoration: none;
   font-size: 2rem;
   color: $color-3;
+  transition: all 0.3s;
+
+  padding-left: 0;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    border-radius: 5%;
+    padding: 0.2rem 0.5rem;
+    background-color: $color-2;
+  }
 }

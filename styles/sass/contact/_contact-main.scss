@@ -1,0 +1,107 @@
+main {
+  background-color: $color-4;
+  width: 100%;
+  // height: calc(50vh - 31px);
+
+  .wrapper {
+    max-width: 1400px;
+    width: 90%;
+  }
+}
+
+section.contact {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 4rem;
+  // position: relative;
+
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 calc(30% - 3rem);
+    margin-right: 3rem;
+    margin-top: 3rem;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $color-1;
+      padding-right: 1rem;
+      // text-decoration: none;
+    }
+  }
+
+  .form-container {
+    flex: 1 0 70%;
+    margin-top: -6rem;
+    background-color: $color-3;
+  }
+  form {
+    position: relative;
+    top: -1rem;
+    right: 2rem;
+    width: calc(100% + 1rem);
+
+    color: $color-1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-5;
+
+    .divider {
+      display: flex;
+    }
+
+    .divider .input-container:last-child {
+      margin-left: 1rem;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    label {
+      padding-left: 1rem;
+    }
+    input {
+      border: none;
+      background-color: $color-5;
+      border-bottom: 1px solid $color-1;
+      margin-bottom: 1rem;
+      color: $color-1;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    label[for="userMessage"] {
+      position: absolute;
+      top: 1rem;
+    }
+
+    textarea {
+      border: 1px solid $color-1;
+      background-color: $color-5;
+      color: $color-1;
+      width: 100%;
+
+      &:focus + label[for="userMessage"],
+      &:valid + label[for="userMessage"] {
+        display: none;
+      }
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

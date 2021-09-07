@@ -1,0 +1,62 @@
+@import "setup";
+@import "contact/contact-header";
+@import "nav-and-footer";
+@import "contact/contact-main";
+
+@media (max-width: 1040px) {
+  /*=============
+  Header
+  =============== */
+
+  header .nav-bar {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+    width: 100%;
+
+    p.mobile-logo,
+    i.fas {
+      display: block;
+      color: $color-1;
+      padding: 1rem;
+    }
+
+    i.fas {
+      font-size: 2rem;
+    }
+  }
+
+  section.contact {
+    flex-direction: column-reverse;
+
+    form {
+      position: static;
+      width: 100%;
+    }
+    .link-container,
+    .form-container {
+      flex: none;
+    }
+  }
+  section.contact .form-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 740px) {
+  section.contact form .divider {
+    flex-direction: column;
+
+    .input-container:last-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  section.contact {
+    padding: 0;
+  }
+}

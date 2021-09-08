@@ -17,10 +17,28 @@
     width: 100%;
 
     p.mobile-logo,
-    i.fas {
+    label.menu-button {
       display: block;
       color: $color-1;
       padding: 1rem;
+    }
+
+    label.menu-button:hover,
+    label.menu-button:focus {
+      color: $color-3;
+    }
+
+    input.toggle-menu:checked ~ .nav-bar {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: black;
+      z-index: 20;
+      top: 0;
+
+      li:nth-child(3) {
+        display: none;
+      }
     }
 
     i.fas {

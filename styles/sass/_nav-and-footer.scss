@@ -8,8 +8,13 @@ nav {
   align-items: center;
 
   p.mobile-logo,
-  i.fas {
+  label.menu-button,
+  input.toggle-menu {
     display: none;
+  }
+
+  label.menu-button {
+    cursor: pointer;
   }
 
   .nav-bar {

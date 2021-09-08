@@ -478,8 +478,12 @@ nav {
           align-items: center;
 }
 nav p.mobile-logo,
-nav i.fas {
+nav label.menu-button,
+nav input.toggle-menu {
   display: none;
+}
+nav label.menu-button {
+  cursor: pointer;
 }
 nav .nav-bar {
   display: -webkit-box;
@@ -726,10 +730,30 @@ article.right-container form button {
     width: 100%;
   }
   nav p.mobile-logo,
-nav i.fas {
+nav label.menu-button {
     display: block;
     color: #ffffff;
     padding: 1rem;
+  }
+  nav label.menu-button:hover,
+nav label.menu-button:focus {
+    color: #ff8327;
+  }
+  nav input.toggle-menu:checked ~ .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    background-color: black;
+    z-index: 20;
+    top: 0;
+  }
+  nav input.toggle-menu:checked ~ .nav-bar li:nth-child(3) {
+    display: none;
   }
   nav i.fas {
     font-size: 2rem;

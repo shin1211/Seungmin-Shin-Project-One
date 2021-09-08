@@ -759,6 +759,9 @@ nav label.menu-button:focus {
     font-size: 2rem;
   }
 
+  /*=============
+  main
+  =============== */
   main .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -769,13 +772,16 @@ nav label.menu-button:focus {
             flex-direction: column;
   }
 
+  aside.side-bar {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+
   aside.side-bar .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
   }
   aside.side-bar .container .image-container {
     width: 33%;

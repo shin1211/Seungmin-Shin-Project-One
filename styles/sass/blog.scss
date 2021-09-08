@@ -7,7 +7,6 @@
   /*=============
   Header
   =============== */
-
   header .nav-bar {
     display: none;
   }
@@ -45,14 +44,18 @@
       font-size: 2rem;
     }
   }
-
+  /*=============
+  main
+  =============== */
   main .wrapper {
     display: flex;
     flex-direction: column;
   }
+  aside.side-bar {
+    flex: none;
+  }
   aside.side-bar .container {
     display: flex;
-    flex: none;
     .image-container {
       width: 33%;
       margin-right: 2rem;

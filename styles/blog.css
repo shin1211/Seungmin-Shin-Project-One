@@ -522,7 +522,7 @@ nav a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-nav a:hover, nav a:focus {
+nav a:hover, nav a:focus, nav a:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #ff8327;
@@ -732,6 +732,8 @@ article.right-container form textarea {
   background-color: #111010;
   color: #ffffff;
   width: 100%;
+  resize: none;
+  height: 240px;
 }
 article.right-container form textarea:focus + label[for=userComment], article.right-container form textarea:valid + label[for=userComment] {
   display: none;
@@ -760,6 +762,10 @@ nav label.menu-button {
     display: block;
     color: #ffffff;
     padding: 1rem;
+    font-size: 2.5rem;
+  }
+  nav label.menu-button {
+    margin-top: 13px;
   }
   nav label.menu-button:hover,
 nav label.menu-button:focus {

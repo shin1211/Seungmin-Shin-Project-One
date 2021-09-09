@@ -546,7 +546,7 @@ nav a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-nav a:hover, nav a:focus {
+nav a:hover, nav a:focus, nav a:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #ff8327;
@@ -786,10 +786,14 @@ nav label.menu-button {
     display: block;
     color: #ffffff;
     padding: 1rem;
+    font-size: 2.5rem;
   }
   nav label.menu-button:hover,
 nav label.menu-button:focus {
     color: #ff8327;
+  }
+  nav label.menu-button {
+    margin-top: 13px;
   }
   nav input.toggle-menu:checked ~ .nav-bar {
     display: -webkit-box;

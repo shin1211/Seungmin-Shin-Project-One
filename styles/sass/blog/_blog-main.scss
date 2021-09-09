@@ -179,6 +179,8 @@ article.right-container {
       background-color: $color-4;
       color: $color-1;
       width: 100%;
+      resize: none;
+      height: 240px;
 
       &:focus + label[for="userComment"],
       &:valid + label[for="userComment"] {

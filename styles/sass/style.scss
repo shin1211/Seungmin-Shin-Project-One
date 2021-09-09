@@ -21,11 +21,16 @@
       display: block;
       color: $color-1;
       padding: 1rem;
+      font-size: 2.5rem;
     }
 
     label.menu-button:hover,
     label.menu-button:focus {
       color: $color-3;
+    }
+
+    label.menu-button {
+      margin-top: 13px;
     }
 
     input.toggle-menu:checked ~ .nav-bar {

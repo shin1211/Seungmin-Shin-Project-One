@@ -15,12 +15,17 @@
   nav {
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 
     p.mobile-logo,
     label.menu-button {
       display: block;
       color: $color-1;
       padding: 1rem;
+      font-size: 2.5rem;
+    }
+    label.menu-button {
+      margin-top: 13px;
     }
 
     label.menu-button:hover,

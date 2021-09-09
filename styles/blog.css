@@ -302,6 +302,19 @@ a {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 /*=============
 Font
 =============== */
@@ -452,7 +465,7 @@ aside.side-bar .content a:hover, aside.side-bar .content a:focus {
 }
 
 header {
-  background-image: url(../images/Blog/blog-header-1.jpg);
+  background-image: url(../images/blog/blog-header-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -540,6 +553,9 @@ main .wrapper {
   display: flex;
 }
 
+/*=============
+aside.side-bar
+=============== */
 aside.side-bar {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
@@ -581,6 +597,9 @@ aside.side-bar ul {
   color: #bf2603;
 }
 
+/*=============
+article.right-container
+=============== */
 article.right-container {
   width: 80%;
   background-color: #ff8327;
@@ -607,6 +626,9 @@ article.right-container .menu {
   padding: 2rem;
   padding-left: 4rem;
 }
+article.right-container .menu p {
+  margin-bottom: 1rem;
+}
 article.right-container .menu h4 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -629,10 +651,14 @@ article.right-container .comments .review {
   display: -ms-flexbox;
   display: flex;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+article.right-container .comments .review:nth-of-type(1) {
+  margin-bottom: 5rem;
 }
 article.right-container .comments .review:nth-of-type(1) .image-container,
 article.right-container .comments .review:nth-of-type(2) .image-container {
-  background-image: url(../images/Blog/comment-image-1.jpg);
+  background-image: url(../images/blog/comment-image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100px;
@@ -640,7 +666,7 @@ article.right-container .comments .review:nth-of-type(2) .image-container {
   margin-top: 14px;
 }
 article.right-container .comments .review:nth-of-type(2) .image-container {
-  background-image: url(../images/Blog/comment-image-2.jpg);
+  background-image: url(../images/blog/comment-image-2.jpg);
 }
 article.right-container .comments .container {
   width: 100%;
@@ -715,7 +741,7 @@ article.right-container form button {
   cursor: pointer;
 }
 
-@media (max-width: 1052px) {
+@media (max-width: 1024px) {
   /*=============
   Header
   =============== */
@@ -760,7 +786,7 @@ nav label.menu-button:focus {
   }
 
   /*=============
-  main
+  main aside
   =============== */
   main .wrapper {
     display: -webkit-box;
@@ -796,6 +822,9 @@ nav label.menu-button:focus {
        object-fit: contain;
   }
 
+  /*=============
+  article.right-container
+  =============== */
   article.right-container {
     margin: 0;
     margin-top: 1rem;
@@ -810,7 +839,10 @@ nav label.menu-button:focus {
     width: 100%;
   }
 }
-@media (max-width: 780px) {
+@media (max-width: 768px) {
+  /*=============
+  aside.side-bar
+  =============== */
   aside.side-bar .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -827,6 +859,9 @@ nav label.menu-button:focus {
     width: 100%;
   }
 
+  /*=============
+  article.right-container
+  =============== */
   article.right-container {
     width: 100%;
   }
@@ -845,7 +880,10 @@ article.right-container section.comments {
     margin-left: 0;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 480px) {
+  /*=============
+  article.right-container
+  =============== */
   article.right-container section.menu,
 article.right-container section.comments,
 article.right-container form {

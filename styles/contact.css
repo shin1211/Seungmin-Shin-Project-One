@@ -302,6 +302,19 @@ a {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 /*=============
 Font
 =============== */
@@ -452,7 +465,7 @@ aside.side-bar .content a:hover, aside.side-bar .content a:focus {
 }
 
 header {
-  background-image: url(../images/Contact/contact-header-1.jpg);
+  background-image: url(../images/contact/contact-header-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -532,6 +545,9 @@ main .wrapper {
   width: 90%;
 }
 
+/*=============
+section.contact icon-container
+=============== */
 section.contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,6 +555,9 @@ section.contact {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 2rem 4rem;
+  /*=============
+  form container
+  =============== */
 }
 section.contact .link-container {
   display: -webkit-box;
@@ -562,9 +581,16 @@ section.contact .icon-container {
       -ms-flex-align: center;
           align-items: center;
 }
+section.contact .icon-container li:first-child a {
+  padding-left: 0;
+}
 section.contact .icon-container a {
+  display: inline-block;
   color: #ffffff;
-  padding-right: 1rem;
+  padding: 0.5rem;
+}
+section.contact .icon-container + p {
+  margin-bottom: 1rem;
 }
 section.contact .form-container {
   -webkit-box-flex: 1;
@@ -646,7 +672,7 @@ section.contact form button {
   cursor: pointer;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1024px) {
   /*=============
   Header
   =============== */
@@ -682,6 +708,7 @@ nav label.menu-button:focus {
     background-color: black;
     z-index: 20;
     top: 0;
+    left: 0;
   }
   nav input.toggle-menu:checked ~ .nav-bar li:nth-child(3) {
     display: none;
@@ -690,6 +717,9 @@ nav label.menu-button:focus {
     font-size: 2rem;
   }
 
+  /*=============
+  section.contact
+  =============== */
   section.contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -711,7 +741,10 @@ section.contact .form-container {
     margin-top: 2rem;
   }
 }
-@media (max-width: 740px) {
+@media (max-width: 768px) {
+  /*=============
+  section.contact
+  =============== */
   section.contact form .divider {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -722,8 +755,12 @@ section.contact .form-container {
     margin-left: 0;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 480px) {
+  /*=============
+  section.contact
+  =============== */
   section.contact {
     padding: 0;
+    padding-bottom: 2rem;
   }
 }

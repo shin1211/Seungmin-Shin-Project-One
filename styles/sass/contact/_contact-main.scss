@@ -1,19 +1,19 @@
 main {
   background-color: $color-4;
   width: 100%;
-  // height: calc(50vh - 31px);
 
   .wrapper {
     max-width: 1400px;
     width: 90%;
   }
 }
-
+/*=============
+section.contact icon-container
+=============== */
 section.contact {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 4rem;
-  // position: relative;
 
   .link-container {
     display: flex;
@@ -27,13 +27,25 @@ section.contact {
     display: flex;
     align-items: center;
 
+    li:first-child a {
+      padding-left: 0;
+    }
     a {
+      display: inline-block;
       color: $color-1;
-      padding-right: 1rem;
+
+      padding: 0.5rem;
       // text-decoration: none;
     }
   }
 
+  .icon-container + p {
+    margin-bottom: 1rem;
+  }
+
+  /*=============
+  form container
+  =============== */
   .form-container {
     flex: 1 0 70%;
     margin-top: -6rem;

@@ -12,13 +12,14 @@
     <script src="https://kit.fontawesome.com/47d75b071a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <a href="#mainContent" class="skip-link">Skip to main contents</a>
     <!--  Header Start -->
     <header>
         <div class="wrapper">
             <nav>
                 <p class="mobile-logo">Bar-One</p>
                 <input type="checkbox" id="toggleMenu" class="toggle-menu">
-                <label tabindex="0" for="toggleMenu" class="menu-button"><i class="fas fa-bars"><span class="sr-only">Menu</span></i></label>
+                <label tabindex="0" for="toggleMenu" class="menu-button"><i class="fas fa-bars" aria-hidden="true"><span class="sr-only">Menu</span></i></label>
                 <ul class="nav-bar">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -36,34 +37,34 @@
     
     </header>  <!-- Header End -->
     <!-- Main Start  -->
-    <main>
+    <main id="mainContent">
         <!-- About-info Start -->
         <section class="about-info">
             <div class="wrapper">
                 <ul>
                     <li>
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-home" aria-hidden="true"></i>
                         <div class="content">     
                             <h2>New space</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nam suscipit possimus vel magni accusantium aut, nisi perferendis, quae, labore pariatur qui. Illo, maxime sit.</p>
                         </div>
                     </li>
                     <li>
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                         <div class="content">
                             <h2>Community</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nam suscipit possimus vel magni accusantium aut, nisi perferendis, quae, labore pariatur qui. Illo, maxime sit.</p>
                         </div>
                     </li>
                     <li>
-                        <i class="fas fa-file"></i>
+                        <i class="fas fa-file" aria-hidden="true"></i>
                         <div class="content">
                             <h2>Blog</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nam suscipit possimus vel magni accusantium aut, nisi perferendis, quae, labore pariatur qui. Illo, maxime sit.</p>
                         </div>
                     </li>
                     <li>
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone" aria-hidden="true"></i>
                         <div class="content">
                             <h2>Get in Touch</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nam suscipit possimus vel magni accusantium aut, nisi perferendis, quae, labore pariatur qui. Illo, maxime sit.</p>
@@ -124,9 +125,9 @@
         <section class="gallery">
             <div class="wrapper">
                 <ul class="gallery-container">
-                    <li class="image-container"><img src="./images/Home/gallery-image-1.jpg" alt=""></li>
-                    <li class="image-container"><img src="./images/Home/gallery-image-2.jpg" alt=""></li>
-                    <li class="image-container"><img src="./images/Home/gallery-image-3.jpg" alt=""></li>
+                    <li class="image-container"><img src="./images/home/gallery-image-1.jpg" alt=""></li>
+                    <li class="image-container"><img src="./images/home/gallery-image-2.jpg" alt=""></li>
+                    <li class="image-container"><img src="./images/home/gallery-image-3.jpg" alt=""></li>
                 </ul>
             </div>
         </section>

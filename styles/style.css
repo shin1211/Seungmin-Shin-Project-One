@@ -302,6 +302,19 @@ a {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 /*=============
 Font
 =============== */
@@ -452,7 +465,7 @@ aside.side-bar .content a:hover, aside.side-bar .content a:focus {
 }
 
 header {
-  background-image: url(../images/Home/home-image-1.jpg);
+  background-image: url(../images/home/home-image-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -460,7 +473,7 @@ header {
   position: relative;
 }
 header .sub-background {
-  background-image: url(../images/Home/header-box.jpg);
+  background-image: url(../images/home/header-box.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -625,7 +638,7 @@ section.blog .image-container {
           flex: 1 0 50%;
 }
 section.blog .image-container .left-image {
-  background-image: url(../images/Home/left-image.jpg);
+  background-image: url(../images/home/left-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: calc(100% - 5rem);
@@ -635,7 +648,7 @@ section.blog .image-container .left-image {
           box-shadow: 15px 15px #ff8327;
 }
 section.blog .image-container .right-image {
-  background-image: url(../images/Home/right-image.jpg);
+  background-image: url(../images/home/right-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: calc(100% - 5rem);
@@ -694,7 +707,7 @@ section.party-info a {
   margin: 1.5rem;
 }
 section.party-info .banner-image {
-  background-image: url(../images/Home/banner-image.jpg);
+  background-image: url(../images/home/banner-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -721,7 +734,7 @@ section.event .image-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 30%;
           flex: 1 0 30%;
-  background-image: url(../images/Home/small-box-image.jpg);
+  background-image: url(../images/home/small-box-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -790,6 +803,7 @@ nav label.menu-button:focus {
     background-color: black;
     z-index: 20;
     top: 0;
+    left: 0;
   }
   nav input.toggle-menu:checked ~ .nav-bar li:nth-child(3) {
     display: none;
@@ -916,6 +930,9 @@ section.event .content {
   }
 }
 @media (max-width: 480px) {
+  /*=============
+  Header
+  =============== */
   header h1 {
     font-size: 10rem;
     margin-bottom: 8rem;
@@ -925,6 +942,9 @@ section.event .content {
     top: 150px;
   }
 
+  /*=============
+  section.about
+  =============== */
   section.about-info li {
     padding: 2rem 1rem;
   }
@@ -942,6 +962,9 @@ section.blog li:last-child .content a {
     margin: 1.5rem 0;
   }
 
+  /*=============
+  section.party
+  =============== */
   section.party-info {
     padding: 0;
     display: -webkit-box;
@@ -964,6 +987,9 @@ section.blog li:last-child .content a {
     padding: 0 1rem;
   }
 
+  /*=============
+  section.event
+  =============== */
   section.event {
     padding: 3rem 0;
   }

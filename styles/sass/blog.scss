@@ -3,7 +3,7 @@
 @import "nav-and-footer";
 @import "blog/blog-main";
 
-@media (max-width: 1052px) {
+@media (max-width: 1024px) {
   /*=============
   Header
   =============== */
@@ -45,7 +45,7 @@
     }
   }
   /*=============
-  main
+  main aside
   =============== */
   main .wrapper {
     display: flex;
@@ -70,6 +70,9 @@
     }
   }
 
+  /*=============
+  article.right-container
+  =============== */
   article.right-container {
     margin: 0;
     margin-top: 1rem;
@@ -86,7 +89,10 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
+  /*=============
+  aside.side-bar
+  =============== */
   aside.side-bar .container {
     flex-direction: column;
     margin-top: 0;
@@ -102,6 +108,9 @@
     }
   }
 
+  /*=============
+  article.right-container
+  =============== */
   article.right-container {
     width: 100%;
 
@@ -120,7 +129,11 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
+  /*=============
+  article.right-container
+  =============== */
+
   article.right-container section.menu,
   article.right-container section.comments,
   article.right-container form {

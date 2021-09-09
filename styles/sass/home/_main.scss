@@ -68,7 +68,7 @@ section.blog {
     flex: 1 0 50%;
 
     .left-image {
-      background-image: url(../images/Home/left-image.jpg);
+      background-image: url(../images/home/left-image.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       width: calc(100% - 5rem);
@@ -80,7 +80,7 @@ section.blog {
     }
 
     .right-image {
-      background-image: url(../images/Home/right-image.jpg);
+      background-image: url(../images/home/right-image.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       width: calc(100% - 5rem);
@@ -129,7 +129,7 @@ section.party-info {
   }
 
   .banner-image {
-    background-image: url(../images/Home/banner-image.jpg);
+    background-image: url(../images/home/banner-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -153,7 +153,7 @@ section.event {
   }
   .image-container {
     flex: 1 0 30%;
-    background-image: url(../images/Home/small-box-image.jpg);
+    background-image: url(../images/home/small-box-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;

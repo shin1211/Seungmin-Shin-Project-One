@@ -783,6 +783,7 @@ nav label.menu-button:focus {
     background-color: black;
     z-index: 20;
     top: 0;
+    left: 0;
   }
   nav input.toggle-menu:checked ~ .nav-bar li:nth-child(3) {
     display: none;

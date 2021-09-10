@@ -39,6 +39,7 @@
       background-color: black;
       z-index: 20;
       top: 0;
+      left: 0;
 
       li:nth-child(3) {
         display: none;
@@ -153,7 +154,6 @@
     }
   }
   article.right-container h3 {
-    // margin-top: 2rem;
     margin-top: 2rem;
   }
 

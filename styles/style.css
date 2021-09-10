@@ -641,6 +641,7 @@ section.blog .image-container .left-image {
   background-image: url(../images/home/left-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: calc(100% - 5rem);
   height: 370px;
   margin-top: -34px;
@@ -651,8 +652,10 @@ section.blog .image-container .right-image {
   background-image: url(../images/home/right-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: calc(100% - 5rem);
   height: 370px;
+  margin-bottom: -50px;
   position: absolute;
   bottom: -50px;
   right: 0;

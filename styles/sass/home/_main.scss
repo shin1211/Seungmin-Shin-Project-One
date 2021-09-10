@@ -71,10 +71,9 @@ section.blog {
       background-image: url(../images/home/left-image.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       width: calc(100% - 5rem);
       height: 370px;
-      // width: calc(100% - 7rem);
-      // height: 500px;
       margin-top: -34px;
       box-shadow: 15px 15px $color-3;
     }
@@ -83,20 +82,18 @@ section.blog {
       background-image: url(../images/home/right-image.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       width: calc(100% - 5rem);
       height: 370px;
-      // width: calc(100% - 7rem);
-      // height: 500px;
+      margin-bottom: -50px;
       position: absolute;
       bottom: -50px;
-      // bottom: -100px;
       right: 0;
       box-shadow: -15px 15px $color-3;
     }
   }
   .content {
     padding: 3rem 5rem;
-    // padding: 5rem 7rem;
     flex: 1 0 50%;
     display: flex;
     flex-direction: column;

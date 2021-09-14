@@ -502,7 +502,7 @@ nav .bar {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -512,7 +512,7 @@ nav .bar::before, nav .bar::after {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: inherit;
+  background-color: #ffffff;
 }
 nav .bar::before {
   -webkit-transform: translateY(-10px);

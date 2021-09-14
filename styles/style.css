@@ -526,7 +526,7 @@ nav .bar {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -536,7 +536,7 @@ nav .bar::before, nav .bar::after {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: inherit;
+  background-color: #ffffff;
 }
 nav .bar::before {
   -webkit-transform: translateY(-10px);
@@ -798,8 +798,8 @@ section.gallery .image-container:last-child {
   /*=============
   Header
   =============== */
-  header .nav-bar {
-    display: none;
+  header {
+    position: relative;
   }
 
   nav {
@@ -807,6 +807,23 @@ section.gallery .image-container:last-child {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+    z-index: 20;
+  }
+  nav .hamburger-menu {
+    right: 1.8rem;
+    position: fixed;
+  }
+  nav .nav-bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: #bf2603;
+  }
+  nav .nav-bar li:nth-child(3) {
+    display: none;
   }
   nav p.mobile-logo,
 nav .hamburger-menu {
@@ -814,38 +831,25 @@ nav .hamburger-menu {
     color: #ffffff;
     padding: 1rem;
     font-size: 2.5rem;
-    background-color: blue;
-  }
-  nav .hamburger-menu:hover .bar,
-nav .hamburger-menu:focus .bar {
-    background-color: #ff8327;
-  }
-  nav label.menu-button {
-    margin-top: 13px;
-  }
-  nav input.toggle-menu:checked ~ .nav-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    background-color: black;
-    z-index: 20;
-    top: 0;
-    left: 0;
-  }
-  nav input.toggle-menu:checked ~ .nav-bar li:nth-child(3) {
-    display: none;
-  }
-  nav i.fas {
-    font-size: 2rem;
   }
 
   nav.active ul.nav-bar {
-    display: block;
+    left: 0;
+    position: fixed;
+  }
+
+  nav.active .bar {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background-color: transparent;
+  }
+  nav.active .bar::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  nav.active .bar::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 
   /*=============

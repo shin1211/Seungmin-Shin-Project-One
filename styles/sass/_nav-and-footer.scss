@@ -22,7 +22,7 @@ nav {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: $color-1;
     position: relative;
     transition: all 0.5s;
 
@@ -32,7 +32,7 @@ nav {
       position: absolute;
       width: inherit;
       height: inherit;
-      background-color: inherit;
+      background-color: $color-1;
     }
 
     &::before {

@@ -514,13 +514,37 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-nav p.mobile-logo,
-nav label.menu-button,
-nav input.toggle-menu {
+nav p.mobile-logo {
   display: none;
 }
-nav label.menu-button {
+nav .hamburger-menu {
   cursor: pointer;
+  padding: 1rem;
+  display: none;
+}
+nav .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+nav .bar::before, nav .bar::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+}
+nav .bar::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+nav .bar::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 nav .nav-bar {
   display: -webkit-box;
@@ -785,15 +809,16 @@ section.gallery .image-container:last-child {
     width: 100%;
   }
   nav p.mobile-logo,
-nav label.menu-button {
+nav .hamburger-menu {
     display: block;
     color: #ffffff;
     padding: 1rem;
     font-size: 2.5rem;
+    background-color: blue;
   }
-  nav label.menu-button:hover,
-nav label.menu-button:focus {
-    color: #ff8327;
+  nav .hamburger-menu:hover .bar,
+nav .hamburger-menu:focus .bar {
+    background-color: #ff8327;
   }
   nav label.menu-button {
     margin-top: 13px;
@@ -817,6 +842,10 @@ nav label.menu-button:focus {
   }
   nav i.fas {
     font-size: 2rem;
+  }
+
+  nav.active ul.nav-bar {
+    display: block;
   }
 
   /*=============

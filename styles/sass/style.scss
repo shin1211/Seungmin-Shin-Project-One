@@ -17,16 +17,17 @@
     width: 100%;
 
     p.mobile-logo,
-    label.menu-button {
+    .hamburger-menu {
       display: block;
       color: $color-1;
       padding: 1rem;
       font-size: 2.5rem;
+      background-color: blue;
     }
 
-    label.menu-button:hover,
-    label.menu-button:focus {
-      color: $color-3;
+    .hamburger-menu:hover .bar,
+    .hamburger-menu:focus .bar {
+      background-color: $color-3;
     }
 
     label.menu-button {
@@ -52,6 +53,9 @@
     }
   }
 
+  nav.active ul.nav-bar {
+    display: block;
+  }
   /*=============
   Blog
   =============== */

@@ -490,13 +490,37 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-nav p.mobile-logo,
-nav label.menu-button,
-nav input.toggle-menu {
+nav p.mobile-logo {
   display: none;
 }
-nav label.menu-button {
+nav .hamburger-menu {
   cursor: pointer;
+  padding: 1rem;
+  display: none;
+}
+nav .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+nav .bar::before, nav .bar::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+}
+nav .bar::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+nav .bar::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 nav .nav-bar {
   display: -webkit-box;

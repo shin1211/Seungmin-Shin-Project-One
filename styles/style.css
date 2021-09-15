@@ -778,20 +778,47 @@ section.event .content {
 /*=============
 section.galley
 =============== */
-section.gallery {
-  background-color: #220303;
-}
-section.gallery .gallery-container {
+section.gallery .carousel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5rem 0;
+  margin: 2rem auto;
+  position: relative;
+  width: 400px;
+  overflow: hidden;
 }
-section.gallery .image-container {
-  margin-right: 1.3rem;
+section.gallery .carousel .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-section.gallery .image-container:last-child {
-  margin: 0;
+section.gallery .carousel button.slide-button {
+  background: #ff8327;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+section.gallery .carousel button.slide-button.previous {
+  left: 5px;
+}
+section.gallery .carousel button.slide-button.next {
+  right: 5px;
 }
 
 @media (max-width: 1024px) {

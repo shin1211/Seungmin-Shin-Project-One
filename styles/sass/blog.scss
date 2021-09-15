@@ -7,47 +7,58 @@
   /*=============
   Header
   =============== */
-  header .nav-bar {
-    display: none;
+
+  header {
+    position: relative;
   }
 
   nav {
     justify-content: space-between;
     width: 100%;
+    z-index: 20;
 
-    p.mobile-logo,
-    label.menu-button {
+    .hamburger-menu {
+      right: 1.8rem;
+      position: fixed;
+    }
+
+    .nav-bar {
       display: block;
-      color: $color-1;
-      padding: 1rem;
-      font-size: 2.5rem;
-    }
-
-    label.menu-button {
-      margin-top: 13px;
-    }
-
-    label.menu-button:hover,
-    label.menu-button:focus {
-      color: $color-3;
-    }
-
-    input.toggle-menu:checked ~ .nav-bar {
-      display: flex;
-      flex-direction: column;
       position: absolute;
-      background-color: black;
-      z-index: 20;
       top: 0;
-      left: 0;
+      left: -100%;
+      transition: all 0.5s;
+      background-color: $color-2;
 
       li:nth-child(3) {
         display: none;
       }
     }
 
-    i.fas {
-      font-size: 2rem;
+    p.mobile-logo,
+    .hamburger-menu {
+      display: block;
+      color: $color-1;
+      padding: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  nav.active ul.nav-bar {
+    left: 0;
+    position: fixed;
+  }
+
+  nav.active .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
     }
   }
   /*=============

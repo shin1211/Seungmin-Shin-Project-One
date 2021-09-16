@@ -167,53 +167,41 @@ section.event {
 section.galley
 =============== */
 
-// section.gallery {
-//   background-color: $color-5;
+section.gallery {
+  background-color: $color-4;
 
-//   .gallery-container {
-//     display: flex;
-//     padding: 5rem 0;
-//   }
-
-//   .image-container {
-//     margin-right: 1.3rem;
-
-//     &:last-child {
-//       margin: 0;
-//     }
-//   }
-// }
-
-section.gallery .carousel {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  // overflow: hidden;
-  margin: 2rem auto;
-  position: relative;
-  width: 400px;
-  overflow: hidden;
-  // border: 1px solid red;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 400px;
+    overflow: hidden;
+  }
 
   .img-container {
     display: flex;
     transform: translateX(0);
     transition: transform 0.25s;
-    // width: 400px;
     align-items: center;
-
-    img {
-      // opacity: 0.4;
-      // margin-right: 1rem;
-    }
   }
 
   button.slide-button {
-    background: $color-3;
+    background-color: $color-3;
+    color: $color-4;
     border: 0;
     border-radius: 50%;
-    position: absolute;
-    z-index: 1;
+    cursor: pointer;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
 
     &.previous {
       left: 5px;

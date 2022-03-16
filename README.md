@@ -1,4 +1,4 @@
-# Seungmin-Shin-Project-One Bar-One
+#Bar-One
 
 [Live Page](https://shin1211.github.io/Seungmin-Shin-Project-One).
 
